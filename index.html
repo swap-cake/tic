@@ -243,6 +243,10 @@
         msgContainer.classList.add('hide');
         newGameContainer.classList.add('hide');
         resetBtn.style.display = "inline-block";
+        loseSound.pause();
+        loseSound.currentTime = 0;
+        winSound.pause();
+        winSound.currentTime = 0;
     };
 
     newGameBtn.addEventListener('click', resetGame);
