@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<img src="images/tic%20banner2.png" alt="banner">
-<title>Stuff Todo</title>
-</head>
 
+<img src="images/tic%20banner2.png" alt="banner">
 <h1 id="stuff-todo">Stuff Todo:</h1>
 <ul>
 <li>Make Themes</li>
