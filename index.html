@@ -126,7 +126,6 @@
     let newGameContainer = document.querySelector('.new-game-container');
     let msg = document.querySelector('#msg');
 
-    // Get the audio element
     const clickSound = document.getElementById('click-sound');
 
     const bgMusic = document.getElementById('bg-music');
@@ -135,7 +134,6 @@
 
     const loseSound = document.getElementById('lose-sound');
 
-    // Unmute background music on first interaction (for Chrome autoplay policy)
     document.addEventListener('click', () => {
         if (bgMusic.paused) {
             bgMusic.play().catch(()=>{});
@@ -156,8 +154,7 @@
 
     boxes.forEach((box) => {
         box.addEventListener('click', function () {
-            // Play the click sound
-            clickSound.currentTime = 0; // reset to start
+            clickSound.currentTime = 0;
             clickSound.play();
 
             if (turnO) {
@@ -214,7 +211,6 @@
             }
         }
 
-        // Draw check
         if (!hasWin) {
             const allBoxes = [...boxes].every((box) => box.innerText !== "");
             if (allBoxes) {
