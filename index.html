@@ -1,4 +1,5 @@
 <html lang="english">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <head>
     <style>
         * {
@@ -12,7 +13,6 @@
             margin-top: 10px;
         }
 
-
         body {
             background-color: #131212FF;
             text-align: center;
@@ -20,12 +20,14 @@
             color: white;
             margin-top: 20px;
         }
+
         .container {
             height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         .game {
             height: 60vmin;
             width: 60vmin;
@@ -34,16 +36,18 @@
             gap: 1.5vmin;
             justify-content: center;
         }
+
         .box {
             height: 18vmin;
             width: 18vmin;
             border-radius: 1rem;
             border: none;
-            box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
             font-size: 8vmin;
             color: red;
             background-color: limegreen;
         }
+
         #reset {
             padding: 1rem;
             font-size: 1.25rem;
@@ -52,9 +56,11 @@
             border-radius: 1rem;
             border: none;
         }
+
         .box:hover {
             background-color: darkgreen;
         }
+
         #new-btn {
             padding: 1rem;
             font-size: 1.25rem;
@@ -63,25 +69,30 @@
             border-radius: 1rem;
             border: none;
         }
+
         #msg {
             font-size: 6vmin;
         }
+
         .msg-container {
             height: auto;
             margin-top: 20px;
         }
+
         .new-game-container {
             height: auto;
         }
+
         .hide {
             display: none;
         }
     </style>
-    <title>Tic Tac Toe</title>
+    <title>tac toe tic</title>
 </head>
+
 <body>
 <main>
-    <h1>Tic Tac Toe</h1>
+    <h1>tac toe tic</h1>
     <div class="msg-container hide">
         <p id="msg">Winner</p>
     </div>
@@ -103,9 +114,9 @@
         <button id="new-btn">new game?</button>
     </div>
 
-    <button id="reset">Reset Game</button>
+    <button id="reset">clear board</button>
 
-    <!-- Add an audio element for the click sound -->
+
     <audio id="click-sound" src="click.wav" preload="auto"></audio>
 
     <!-- Background music -->
@@ -136,9 +147,11 @@
 
     document.addEventListener('click', () => {
         if (bgMusic.paused) {
-            bgMusic.play().catch(()=>{});
+            bgMusic.play().catch(() => {});
         }
-    }, { once: true });
+    }, {
+        once: true
+    });
 
 
     const winPatterns = [
@@ -153,7 +166,7 @@
     ];
 
     boxes.forEach((box) => {
-        box.addEventListener('click', function () {
+        box.addEventListener('click', function() {
             clickSound.currentTime = 0;
             clickSound.play();
 
@@ -203,7 +216,7 @@
             let pos2Val = boxes[pattern[1]].innerText;
             let pos3Val = boxes[pattern[2]].innerText;
 
-            if (pos1Val !== "" && pos2Val!=="" && pos3Val!=="" &&
+            if (pos1Val !== "" && pos2Val !== "" && pos3Val !== "" &&
                 pos1Val === pos2Val && pos2Val === pos3Val) {
                 showWinner(pos1Val);
                 hasWin = true;
@@ -234,7 +247,7 @@
 
     newGameBtn.addEventListener('click', resetGame);
     resetBtn.addEventListener('click', resetGame);
-
 </script>
 </body>
+
 </html>
