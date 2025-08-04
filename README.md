@@ -1,4 +1,4 @@
-![banner.png](banner.png)
+![tic banner2.png](images/tic%20banner2.png)
 
 random tic tac toe website thing made to prove im better than the wiwwy lol
 
